@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Caroline | Água com Gás Saborizada em Lata</title>
+    <meta name="description" content="Aqua Caroline: a nova sensação em água com gás saborizada em lata. Zero açúcar, 100% natural, explosão de sabor em cada gole. Reserve a sua agora!">
+    <meta property="og:title" content="Aqua Caroline | Água com Gás Saborizada em Lata">
+    <meta property="og:description" content="Zero açúcar, 100% sabor natural. Reserve agora e seja o primeiro a provar!">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVBAR
+    ============================================================ -->
+    <header class="navbar" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <i class="fa-solid fa-can-food logo-icon"></i>
+                Aqua<span>Caroline</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero"        class="nav-link active">Início</a>
+                <a href="#beneficios"  class="nav-link">Benefícios</a>
+                <a href="#sabores"     class="nav-link">Sabores</a>
+                <a href="#ingredientes"class="nav-link">Ingredientes</a>
+                <a href="#reserva"     class="nav-link">Reservar</a>
+            </nav>
+            <a href="#reserva" class="btn-cta-nav">
+                <i class="fa-solid fa-star"></i> Reserve Agora
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section class="hero-section" id="hero">
+        <!-- Background animated blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <div class="container hero-container">
+            <!-- Hero Content -->
+            <div class="hero-content reveal-left">
+                <span class="hero-badge">
+                    <i class="fa-solid fa-bolt"></i> NOVO LANÇAMENTO · EM BREVE
+                </span>
+                <h1 class="hero-title">
+                    A lata que vai <br>
+                    <span class="gradient-text">explodir</span> seu <br>
+                    paladar.
+                </h1>
+                <p class="hero-description">
+                    Aqua Caroline é a nova geração de água com gás saborizada em lata.
+                    Zero açúcar, 100% natural — feita com frutas de verdade. 
+                    Cada gole é uma experiência refrescante.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#reserva" class="btn-primary btn-large">
+                        <i class="fa-solid fa-lock"></i> Garantir Minha Reserva
+                    </a>
+                    <a href="#sabores" class="btn-ghost">
+                        Ver sabores <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Micro stats -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>0</strong><span>Açúcar</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong>100%</strong><span>Natural</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong>3</strong><span>Sabores</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual — Premium product can mockup image -->
+            <div class="hero-visual reveal-right">
+                <div class="can-wrapper">
+                    <!-- Floating fruit elements -->
+                    <div class="orbit-fruit fruit-1">🍓</div>
+                    <div class="orbit-fruit fruit-2">🍒</div>
+                    <div class="orbit-fruit fruit-3">🍇</div>
+                    <div class="orbit-fruit fruit-4">💧</div>
+                    <!-- Product Image -->
+                    <img src="{{ url_for('static', filename='aqua_caroline_can.png') }}" class="can-mockup" id="canMockup" alt="Lata Aqua Caroline - Frutas Vermelhas">
+                    <!-- Reflection / shadow -->
+                    <div class="can-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BENEFITS SECTION
+    ============================================================ -->
+    <section class="benefits-section" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Por que Aqua Caroline?</span>
+                <h2 class="section-title">Hidratação que tem <em>personalidade</em></h2>
+                <p class="section-desc">Pensamos em cada detalhe para criar uma bebida que você vai amar e que faz bem de verdade.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card reveal-up" style="--delay:0s">
+                    <div class="benefit-icon bg-emerald">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>Ingredientes 100% Naturais</h3>
+                    <p>Usamos apenas infusões frias de frutas selecionadas e ervas aromáticas orgânicas. Nenhum ingrediente artificial.</p>
+                </div>
+                <div class="benefit-card reveal-up" style="--delay:0.1s">
+                    <div class="benefit-icon bg-blue">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3>Zero Açúcar & Zero Adoçantes</h3>
+                    <p>Sem caloria vazia. Perfeito para dietas low-carb, cetogênicas ou para quem quer um estilo de vida mais limpo e consciente.</p>
+                </div>
+                <div class="benefit-card reveal-up" style="--delay:0.2s">
+                    <div class="benefit-icon bg-amber">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3>Eletrólitos Naturais</h3>
+                    <p>Enriquecida com eletrólitos de fontes naturais para máxima hidratação celular. Ideal para pré e pós-treino.</p>
+                </div>
+                <div class="benefit-card reveal-up" style="--delay:0.3s">
+                    <div class="benefit-icon bg-purple">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <h3>Embalagem Sustentável</h3>
+                    <p>Nossa lata de alumínio é 100% reciclável. Cada unidade vendida contribui com programas de reflorestamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FLAVORS SECTION (Interactive)
+    ============================================================ -->
+    <section class="flavors-section" id="sabores">
+        <div class="flavors-bg" id="flavorsBg"></div>
+        <div class="container">
+            <div class="section-header white-header">
+                <span class="section-tag light">Nossos Sabores</span>
+                <h2 class="section-title text-white">Escolha sua <em>vibe</em></h2>
+                <p class="section-desc text-white-muted">Toque em cada sabor para ver seus detalhes e mudar a atmosfera.</p>
+            </div>
+
+            <div class="flavors-layout">
+                <!-- Flavor Selector Pills -->
+                <div class="flavor-pills">
+                    <button class="flavor-pill active"
+                        data-flavor="lime"
+                        data-name="Limão & Hortelã"
+                        data-desc="Uma explosão cítrica e refrescante. O limão-siciliano traz frescor imediato enquanto a hortelã entrega aquele aroma inconfundível que te dá energia na hora."
+                        data-cal="0" data-carb="0" data-vit="85"
+                        data-tag="⭐ Mais Vendido"
+                        data-bg1="#064e3b" data-bg2="#065f46" data-accent="#34d399"
+                        id="pill-lime">
+                        <span class="pill-emoji">🍋</span>
+                        <div class="pill-text">
+                            <strong>Limão &amp; Hortelã</strong>
+                            <small>Cítrico · Refrescante</small>
+                        </div>
+                    </button>
+                    <button class="flavor-pill"
+                        data-flavor="strawberry"
+                        data-name="Morango & Manjericão"
+                        data-desc="Doçura sutil do morango orgânico com o aroma marcante do manjericão fresco. Uma combinação surpreendente que parece um coquetel sofisticado sem álcool."
+                        data-cal="0" data-carb="0" data-vit="70"
+                        data-tag="🔥 Favorito dos Fãs"
+                        data-bg1="#4c0519" data-bg2="#881337" data-accent="#fb7185"
+                        id="pill-strawberry">
+                        <span class="pill-emoji">🍓</span>
+                        <div class="pill-text">
+                            <strong>Morango &amp; Manjericão</strong>
+                            <small>Doce · Aromático</small>
+                        </div>
+                    </button>
+                    <button class="flavor-pill"
+                        data-flavor="passion"
+                        data-name="Maracujá & Gengibre"
+                        data-desc="A acidez tropical do maracujá com o toque picante e quente do gengibre fresco. Uma combinação que acorda os sentidos e dá aquele up que você precisava."
+                        data-cal="0" data-carb="0" data-vit="90"
+                        data-tag="✨ Edição Especial"
+                        data-bg1="#431407" data-bg2="#7c2d12" data-accent="#fb923c"
+                        id="pill-passion">
+                        <span class="pill-emoji">🍊</span>
+                        <div class="pill-text">
+                            <strong>Maracujá &amp; Gengibre</strong>
+                            <small>Tropical · Energizante</small>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Flavor Detail Card -->
+                <div class="flavor-detail-card" id="flavorCard">
+                    <div class="flavor-card-glow" id="flavorGlow"></div>
+                    <span class="flavor-badge" id="flavorBadge">⭐ Mais Vendido</span>
+                    <h3 class="flavor-title" id="flavorTitle">Limão &amp; Hortelã</h3>
+                    <p class="flavor-description" id="flavorDescription">
+                        Uma explosão cítrica e refrescante. O limão-siciliano traz frescor imediato
+                        enquanto a hortelã entrega aquele aroma inconfundível que te dá energia na hora.
+                    </p>
+                    <div class="flavor-nutrition">
+                        <div class="nutri-box">
+                            <span id="nutri-cal">0</span>
+                            <label>Calorias</label>
+                        </div>
+                        <div class="nutri-box">
+                            <span id="nutri-carb">0g</span>
+                            <label>Carboidratos</label>
+                        </div>
+                        <div class="nutri-box">
+                            <span id="nutri-vit">85%</span>
+                            <label>Vitamina C</label>
+                        </div>
+                    </div>
+                    <a href="#reserva" class="btn-flavor-cta">
+                        Quero Reservar <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         INGREDIENTS SECTION
+    ============================================================ -->
+    <section class="ingredients-section" id="ingredientes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transparência Total</span>
+                <h2 class="section-title">O que tem <em>dentro</em> de cada lata?</h2>
+                <p class="section-desc">Sem mistérios. Ingredientes simples, limpos e que você conhece de verdade.</p>
+            </div>
+            <div class="ingredients-steps">
+                <div class="ingredient-step reveal-up" style="--delay:0s">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <h4><i class="fa-solid fa-mountain-spring"></i> Água Mineral Alcalina</h4>
+                        <p>Extraída de fontes subterrâneas certificadas com pH 7.8, naturalmente rica em minerais essenciais.</p>
+                    </div>
+                </div>
+                <div class="ingredient-step reveal-up" style="--delay:0.1s">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <h4><i class="fa-solid fa-seedling"></i> Infusão Fria de Frutas</h4>
+                        <p>Frutas orgânicas selecionadas maceradas em água gelada por 12h para extrair o máximo de sabor e nutrientes sem calor.</p>
+                    </div>
+                </div>
+                <div class="ingredient-step reveal-up" style="--delay:0.2s">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <h4><i class="fa-solid fa-wind"></i> Gás Carbônico Natural</h4>
+                        <p>Microbolhas suaves que proporcionam aquela crocância satisfatória sem excessos, na medida certa para refrescar.</p>
+                    </div>
+                </div>
+                <div class="ingredient-step reveal-up" style="--delay:0.3s">
+                    <div class="step-num">04</div>
+                    <div class="step-content">
+                        <h4><i class="fa-solid fa-flask"></i> Eletrólitos Naturais</h4>
+                        <p>Sódio, potássio e magnésio de fontes naturais — sem aditivos sintéticos — para uma hidratação eficiente e completa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS SECTION
+    ============================================================ -->
+    <section class="testimonials-section" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quem proveu, aprovou</span>
+                <h2 class="section-title">Nossa comunidade <em>fala</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-up" style="--delay:0s">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-text">"Passei meses tentando largar o refrigerante zero. A Aqua Caroline me salvou! O gás é perfeito, o sabor de limão com hortelã parece um drinque sofisticado."</p>
+                    <div class="t-user">
+                        <div class="t-avatar">MS</div>
+                        <div>
+                            <strong>Mariana Silva</strong>
+                            <span>Nutricionista · RJ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="--delay:0.15s">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-text">"Levo pra academia todo dia. Sem açúcar, com gás e com eletrólitos — é tudo que eu precisava para substituir os isotônicos industrializados."</p>
+                    <div class="t-user">
+                        <div class="t-avatar">RL</div>
+                        <div>
+                            <strong>Rodrigo Lima</strong>
+                            <span>Personal Trainer · SP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="--delay:0.3s">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-text">"Coloquei na mesa da família e os meus filhos preferiram à outra água com gás que a gente comprava. E eu sei exatamente o que vai nela. Perfeito!"</p>
+                    <div class="t-user">
+                        <div class="t-avatar">CA</div>
+                        <div>
+                            <strong>Cláudia Andrade</strong>
+                            <span>Mãe · BH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         LEAD CAPTURE / RESERVA SECTION
+    ============================================================ -->
+    <section class="reserva-section" id="reserva">
+        <div class="blob blob-res-1"></div>
+        <div class="blob blob-res-2"></div>
+        <div class="container reserva-container">
+            <!-- Info lado esquerdo -->
+            <div class="reserva-info reveal-left">
+                <span class="section-tag light">Lançamento exclusivo</span>
+                <h2 class="reserva-title">Seja o <span>primeiro</span> a provar!</h2>
+                <p class="reserva-desc">
+                    Reserve agora sua caixa de lançamento com desconto especial de early-access.
+                    Vagas limitadas para o primeiro lote de produção.
+                </p>
+                <ul class="reserva-perks">
+                    <li><i class="fa-solid fa-check-circle"></i> Desconto exclusivo de pré-lançamento</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Acesso antecipado antes do varejo</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Kit com os 3 sabores</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Frete grátis para todo o Brasil</li>
+                </ul>
+                <div class="reserva-counter">
+                    <div class="counter-bar-wrap">
+                        <div class="counter-bar" style="width: 73%"></div>
+                    </div>
+                    <p><strong>73% das vagas preenchidas</strong> — Corra!</p>
+                </div>
+            </div>
+
+            <!-- Formulário lado direito -->
+            <div class="reserva-form-wrap reveal-right">
+                <div class="form-card">
+                    <div class="form-header">
+                        <h3>Garantir Minha Reserva</h3>
+                        <p>Preencha os dados abaixo e entraremos em contato com os detalhes.</p>
+                    </div>
+
+                    <form id="leadForm" novalidate>
+                        <div class="form-group" id="group-nome">
+                            <label for="nome">
+                                <i class="fa-solid fa-user"></i> Nome Completo
+                            </label>
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Ex: João da Silva"
+                                autocomplete="name"
+                                required
+                            >
+                            <span class="field-error" id="error-nome"></span>
+                        </div>
+
+                        <div class="form-group" id="group-email">
+                            <label for="email">
+                                <i class="fa-solid fa-envelope"></i> E-mail
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Ex: joao@email.com"
+                                autocomplete="email"
+                                required
+                            >
+                            <span class="field-error" id="error-email"></span>
+                        </div>
+
+                        <div class="form-group" id="group-celular">
+                            <label for="celular">
+                                <i class="fa-solid fa-mobile-screen"></i> Celular (WhatsApp)
+                            </label>
+                            <input
+                                type="tel"
+                                id="celular"
+                                name="celular"
+                                placeholder="(21) 99999-9999"
+                                autocomplete="tel"
+                                required
+                                maxlength="15"
+                            >
+                            <span class="field-error" id="error-celular"></span>
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span class="btn-label">
+                                <i class="fa-solid fa-lock"></i> Reservar com Desconto
+                            </span>
+                            <span class="btn-loading" style="display:none;">
+                                <i class="fa-solid fa-spinner fa-spin"></i> Enviando...
+                            </span>
+                        </button>
+
+                        <p class="form-disclaimer">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Seus dados estão seguros. Nunca compartilhamos informações com terceiros.
+                        </p>
+                    </form>
+
+                    <!-- Sucesso -->
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <h4>Reserva garantida! 🎉</h4>
+                        <p id="successMsg">Entraremos em contato em breve com todos os detalhes do seu pedido.</p>
+                        <a href="#hero" class="btn-ghost-dark">Voltar ao início</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#hero" class="logo logo-white">
+                    <i class="fa-solid fa-droplet logo-icon"></i>
+                    Aqua<span>Caroline</span>
+                </a>
+                <p>Redefinindo o que significa beber bem. Zero açúcar, 100% sabor — na lata certa para a vibe certa.</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Navegação</h4>
+                <a href="#hero">Início</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#sabores">Sabores</a>
+                <a href="#ingredientes">Ingredientes</a>
+                <a href="#reserva">Reservar</a>
+            </div>
+            <div class="footer-social-col">
+                <h4>Siga a Aqua Caroline</h4>
+                <div class="social-row">
+                    <a href="#" aria-label="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"    class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Facebook"  class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Caroline Manufacturing Co. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         BOTÃO WHATSAPP FLUTUANTE
+    ============================================================ -->
+    <a
+        href="https://wa.me/5521991733502?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Aqua%20Caroline%20%F0%9F%A5%A4"
+        class="whatsapp-float"
+        id="whatsappBtn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp"
+    >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale Conosco</span>
+    </a>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
